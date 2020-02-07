@@ -1,0 +1,9 @@
+README.md
+setup.py
+eishkom/__init__.py
+eishkom/myModule.py
+eishkom.egg-info/PKG-INFO
+eishkom.egg-info/SOURCES.txt
+eishkom.egg-info/dependency_links.txt
+eishkom.egg-info/requires.txt
+eishkom.egg-info/top_level.txt
