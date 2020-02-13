@@ -1,5 +1,10 @@
 def extract_municipality_hashtags(df):
 
+    '''
+    please remove
+
+    '''
+
     #Create two new columns and input default values "NaN"
     df['municipality'] = np.nan
     df['hashtags'] = np.nan
