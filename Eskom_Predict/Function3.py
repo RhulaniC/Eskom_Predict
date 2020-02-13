@@ -1,5 +1,6 @@
 def date_parser(list_dates):
     """
+<<<<<<< HEAD
     From datetime strings, return only the date in 'yyyy-mm-dd' format.
 
     Args:
@@ -19,6 +20,9 @@ def date_parser(list_dates):
          '2019-11-29',
          '2019-11-29']
         
+=======
+    doctrings
+>>>>>>> 59030df2ed33999d405d5e5f2c7079d79f08c004
     """
 
     dates_only = map(lambda x : x[:10] ,list_dates)
