@@ -29,7 +29,8 @@ Returns:
 
 `{'max': 78.0, 'median': 6.9, 'min': 1.0, 'q1': 5.25, 'q3': 8.75}`  
 
-
+  
+  
 ## date_parser(list_dates)  
 This function takes in a list of datetime strings, extracts the dates of each item in the list, and returns the date in 'yyyy-mm-dd' format.
 
