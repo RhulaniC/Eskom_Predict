@@ -60,12 +60,14 @@ An argument twitter_df.copy() =
 This function takes in Dataframe containing atleast a "Date" column and "Tweets" column and returns a Dataframe grouped by day, with the number of tweets for that day.
 
 #### Example 
-An argument twitter_df.copy() = 	  Tweets                                               Date
-                                 0	@BongaDlulane Please send an email to mediades...	 2019-11-29 12:50:54
-                                 1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53
-                                 2	@BongaDlulane Query escalated to media desk.	      2019-11-29 12:46:10
-                                 3	Before leaving the office this afternoon, head... 	2019-11-29 12:33:36
-                                 4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	 2019-11-29 12:17:43
+An argument twitter_df.copy() = 
+| | Tweets | Date |  
+|---|---|---|
+| 0 |	@BongaDlulane Please send an email to mediades...	| 2019-11-29 12:50:54 |
+| 1 |	@saucy_mamiie Pls log a call on 0860037566	       | 2019-11-29 12:46:53 |
+| 2 |	@BongaDlulane Query escalated to media desk.	     | 2019-11-29 12:46:10 |
+| 3 |	Before leaving the office this afternoon, head... |	2019-11-29 12:33:36 |
+| 4 |	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	| 2019-11-29 12:17:43 |
                                  
                                  
 will return: Date	       Tweets
