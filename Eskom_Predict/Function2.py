@@ -1,4 +1,17 @@
 def five_num_summary(items):
+"""
+
+This function returns a five number summary as a dictionary
+
+The function takes in a list of integers and returns a dictionary of the five number summary
+
+Args:
+    items (list):  List of integers
+
+Returns:
+    dictionary: with keys 'max', 'median', 'min', 'q1', and 'q3' corresponding to the maximum, median, minimum, first quartile and third quartile
+
+"""
 
     #sort list into ascending order
     s = sorted(items)
