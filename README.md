@@ -28,6 +28,29 @@ This function date_parser(list_dates) takes in a list of datetime strings, extra
 An argument list_dates = ['2019-11-29 12:50:54','2019-11-29 12:46:53''2019-11-29 12:46:10'] will return ['2019-11-29', '2019-11-29', '2019-11-29'].
 
 ### Function 4
-
+This function df (dataframe) takes in pandas dataframe with tweets and returns a modified dataframe that includes two new columns containing information about the municipality and  the tweet hashtag (in lowercase).
+#### Example 
+An argument twitter_df.copy() = 	Tweets                                               Date
+                                 0	@BongaDlulane Please send an email to mediades...	 2019-11-29 12:50:54
+                                 1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53
+                                 2	@BongaDlulane Query escalated to media desk.	      2019-11-29 12:46:10
+                                 3	Before leaving the office this afternoon, head... 	2019-11-29 12:33:36
+                                 4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	 2019-11-29 12:17:43
+                                 
+                                 
+will return: Date	       Tweets
+            2019-11-20	  18
+            2019-11-21	  11
+            2019-11-22	  25
+            2019-11-23	  19
+            2019-11-24	  14
+            2019-11-25	  20
+            2019-11-26  	32
+            2019-11-27  	13
+            2019-11-28  	32
+            2019-11-29	  16
+            
+ ### Function 5
+ 
                  ,
                         
