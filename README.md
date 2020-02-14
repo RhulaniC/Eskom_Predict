@@ -31,7 +31,7 @@ An argument list_dates = ['2019-11-29 12:50:54','2019-11-29 12:46:53''2019-11-29
 This function extract_municipality_hashtags(df) takes in pandas dataframe with tweets and returns a modified dataframe that includes two new columns containing information about the municipality and  the tweet hashtag (in lowercase).
 
 #### Example 
-An argument twitter_df.copy() = 	Tweets                                               Date
+An argument twitter_df.copy() = 	  Tweets                                               Date
                                  0	@BongaDlulane Please send an email to mediades...	 2019-11-29 12:50:54
                                  1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53
                                  2	@BongaDlulane Query escalated to media desk.	      2019-11-29 12:46:10
@@ -54,7 +54,7 @@ An argument twitter_df.copy() = 	Tweets                                         
 This function takes in Dataframe containing atleast a "Date" column and "Tweets" column and returns a Dataframe grouped by day, with the number of tweets for that day.
 
 #### Example 
-An argument twitter_df.copy() = 	Tweets                                               Date
+An argument twitter_df.copy() = 	  Tweets                                               Date
                                  0	@BongaDlulane Please send an email to mediades...	 2019-11-29 12:50:54
                                  1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53
                                  2	@BongaDlulane Query escalated to media desk.	      2019-11-29 12:46:10
@@ -77,7 +77,7 @@ will return: Date	       Tweets
 This function word_splitter(df) takes in pandas dataframe with tweets and returns a modified dataframe that includes a new column that contains the tokenized tweets (in lowercase).
 
 #### Example
-An argument = df                    Tweets                                                  Date
+An argument  df   =                 Tweets                                                  Date
                                  0	@BongaDlulane Please send an email to mediades...	 2019-11-29 12:50:54
                                  1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53
                                  2	@BongaDlulane Query escalated to media desk.	      2019-11-29 12:46:10
@@ -92,9 +92,23 @@ An argument = df                    Tweets                                      
     4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	    2019-11-29	    [#eskomfreestate, #mediastatement, :, eskom, s...
 
 ### Function 7 
-This function takes in Dataframe containing atleast a "Date" column and "Tweets" column and returns a modified dataframe containing a column with english stop words removed from a tokenised tweet.
+This function  stop_words_remover(df) takes in Dataframe containing atleast a "Date" column and "Tweets" column and returns a modified dataframe containing a column with english stop words removed from a tokenised tweet.
 
 #### Example
 
+An argument df =                    Tweets                                               Date
+                                 0	@BongaDlulane Please send an email to mediades...	 2019-11-29 12:50:54
+                                 1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53
+                                 2	@BongaDlulane Query escalated to media desk.	      2019-11-29 12:46:10
+                                 3	Before leaving the office this afternoon, head... 	2019-11-29 12:33:36
+                                 4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	 2019-11-29 12:17:43
+Returns
 
-
+     Tweets	                             Date	                Without Stop Words
+    0	@BongaDlulane Please send...	     2019-11-29 12:50:54	 [@bongadlulane, send, email, ...
+    1	@saucy_mamiie Pls log...	         2019-11-29 12:46:53	 [@saucy_mamiie, pls, log, ...
+    2	@BongaDlulane Query...	           2019-11-29 12:46:10	 [@bongadlulane, query, ...
+    3	Before leaving the office...	     2019-11-29 12:33:36	 [leaving, office, ...
+    4	#ESKOMFREESTATE #MEDIASTATEMENT...2019-11-29 12:17:43	 [#eskomfreestate, #mediastatement, ...
+    
+    
