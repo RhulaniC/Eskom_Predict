@@ -117,7 +117,7 @@ For pull request process: Update the README.md with details of changes to the in
                           You may merge the Pull Request in once you have the sign-off of the developers.
 ## Authors
 
-Abdullah Shaikh
+Abdullah Shaikh  
 Kolobe Rufus Seopa
 Tshegofatjo Makhafola
 Vahiel Moodley
