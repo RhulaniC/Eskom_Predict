@@ -119,7 +119,8 @@ An argument df =
 |4	|#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	 |2019-11-29 12:17:43|
 Returns
 
-     Tweets	                             Date	                Without Stop Words
+    | |Tweets	                            | Date	            |    Without Stop Words|
+    |--|--|--|--|
     0	@BongaDlulane Please send...	     2019-11-29 12:50:54	 [@bongadlulane, send, email, ...
     1	@saucy_mamiie Pls log...	         2019-11-29 12:46:53	 [@saucy_mamiie, pls, log, ...
     2	@BongaDlulane Query...	           2019-11-29 12:46:10	 [@bongadlulane, query, ...
