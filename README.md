@@ -34,12 +34,12 @@ This function extract_municipality_hashtags(df) takes in pandas dataframe with t
 
 An argument twitter_df.copy() =  
 
-| | Tweets | Date | 
-|0|@BongaDlulane Please send an email to mediades...|2019-11-29 12:50:54|
-|1|@saucy_mamiie Pls log a call on 0860037566|2019-11-29 12:46:53|   
-|2|	@BongaDlulane Query escalated to media desk.	   |   2019-11-29 12:46:10  |
-|3|	Before leaving the office this afternoon, head...| 	2019-11-29 12:33:36  |                             
-|4|	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	| 2019-11-29 12:17:43  |                                  
+| | Tweets | Date |  
+|0|@BongaDlulane Please send an email to mediades...|2019-11-29 12:50:54|  
+|1|@saucy_mamiie Pls log a call on 0860037566|2019-11-29 12:46:53|     
+|2|	@BongaDlulane Query escalated to media desk.	   |   2019-11-29 12:46:10  |  
+|3|	Before leaving the office this afternoon, head...| 	2019-11-29 12:33:36  |                               
+|4|	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	| 2019-11-29 12:17:43  |                                    
                          	          
                                  
   Tweets	                                            Date         	        municipality     	hashtags
