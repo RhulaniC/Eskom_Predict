@@ -14,7 +14,7 @@ This project runs on the latest version of Python. Before you can start, ensure 
 ## Running the codes
 Once the package is installed into python the following fucntions can be used to get the metrics:
 
-### Fuction 1
+### Function 1
 
 ### Fuction 2
 For this function, you have to first import numpy. The function five_num_summary(items) takes in a list of integers and returns a dictionary of the five number summary. 
