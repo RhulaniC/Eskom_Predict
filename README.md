@@ -28,6 +28,7 @@ Returns:
 
 `{'max': 78.0, 'median': 6.9, 'min': 1.0, 'q1': 5.25, 'q3': 8.75}`
 
+
 ### date_parser(list_dates)  
 This function takes in a list of datetime strings, extracts the dates of each item in the list, and returns the date in 'yyyy-mm-dd' format.
 
@@ -38,6 +39,7 @@ An argument:
 Returns:
 
 `['2019-11-29', '2019-11-29', '2019-11-29']`.
+
 
 ### extract_municipality_hashtags(df)
 This function takes a pandas dataframe of tweets and returns a modified dataframe that includes two new columns containing information about the municipality and the tweet hashtag (in lowercase).
@@ -71,6 +73,7 @@ Returns:
 | 198 | 	@MuthambiPaulina @SABCNewsOnline @IOL @eNCA @e... |	2019-11-20 10:07:41	 | NaN            |   	NaN |
 | 199	| RT @GP_DHS: The @GautengProvince made a commit... | 	2019-11-20 10:00:09	| NaN	            |   NaN |
 
+
 ### number_of_tweets_per_day(df)
 This function takes a dataframe containing at least a "Date" column and "Tweets" column as input. It returns a dataframe grouped by day, with the number of tweets for that day.
 
@@ -99,7 +102,9 @@ Returns:
 | 2019-11-26  |	32 |
 | 2019-11-27  |	13 |
 | 2019-11-28  |	32 |
-| 2019-11-29	 | 16 |    
+| 2019-11-29	 | 16 |   
+
+
 ### word_splitter(df)
 This function takes a pandas dataframe with tweets as input. It returns a modified dataframe that includes a new column that contains the tokenized tweets (in lowercase).
 
@@ -123,6 +128,7 @@ Returns:
 | 2 |	@BongaDlulane Query escalated to media desk.	      |   2019-11-29	  |   [@bongadlulane, query, escalated, to, media, d...|  
 | 3	| Before leaving the office this afternoon, head...   |  2019-11-29    |	 [before, leaving, the, office, this, afternoon...|  
 | 4	| #ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	   | 2019-11-29	    | [#eskomfreestate, #mediastatement, :, eskom, s...      |
+
 
 ### stop_words_remover(df)
 This function takes a dataframe containing at least a "Date" column and "Tweets" column as input. It returns a modified dataframe containing a column where English stop words are removed from a tokenised tweet.
