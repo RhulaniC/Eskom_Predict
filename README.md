@@ -32,7 +32,7 @@ This function extract_municipality_hashtags(df) takes in pandas dataframe with t
 
 #### Example 
 An argument twitter_df.copy() = 	
-| |Tweets | Date | 
+| | Tweets | Date | 
 ----------------  
 |0|@BongaDlulane Please send an email to mediades...|2019-11-29 12:50:54|
                                  0	@BongaDlulane Please send an email to mediades...	 2019-11-29 12:50:54  
