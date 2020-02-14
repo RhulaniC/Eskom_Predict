@@ -31,7 +31,10 @@ An argument list_dates = `['2019-11-29 12:50:54','2019-11-29 12:46:53''2019-11-2
 This function extract_municipality_hashtags(df) takes in pandas dataframe with tweets and returns a modified dataframe that includes two new columns containing information about the municipality and  the tweet hashtag (in lowercase).
 
 #### Example 
-An argument twitter_df.copy() = 	  |Tweets |                                              Date | 
+An argument twitter_df.copy() = 	
+| |Tweets | Date | 
+----------------  
+|0|@BongaDlulane Please send an email to mediades...|2019-11-29 12:50:54|
                                  0	@BongaDlulane Please send an email to mediades...	 2019-11-29 12:50:54  
                                  1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53  
                                  2	@BongaDlulane Query escalated to media desk.	      2019-11-29 12:46:10  
