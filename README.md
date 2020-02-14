@@ -74,16 +74,16 @@ An argument twitter_df.copy() =
 will return:
 |Date|	       Tweets|
 |---|---|
-           | 2019-11-20	 | 18 |
-           | 2019-11-21	 | 11 |
-           | 2019-11-22	 | 25 |
-           | 2019-11-23	 | 19 |
-           | 2019-11-24	 | 14 |
-           | 2019-11-25	 |  20 |
-           | 2019-11-26  |	32 |
-           | 2019-11-27  |	13 |
-           | 2019-11-28  |	32 |
-           | 2019-11-29	 | 16 |    
+| 2019-11-20	 | 18 |
+| 2019-11-21	 | 11 |
+| 2019-11-22	 | 25 |
+| 2019-11-23	 | 19 |
+| 2019-11-24	 | 14 |
+| 2019-11-25	 |  20 |
+| 2019-11-26  |	32 |
+| 2019-11-27  |	13 |
+| 2019-11-28  |	32 |
+| 2019-11-29	 | 16 |    
 ### Function 6
 This function word_splitter(df) takes in pandas dataframe with tweets and returns a modified dataframe that includes a new column that contains the tokenized tweets (in lowercase).
 
