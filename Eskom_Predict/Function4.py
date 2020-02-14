@@ -1,9 +1,17 @@
 def extract_municipality_hashtags(df):
 
-    '''
-    please remove
+"""
+Takes a tweet on electricity and returns the municipality mentioned and any hashtags in that tweet.
 
-    '''
+A function which takes in a pandas dataframe and returns a modified dataframe that includes two new columns that contain information about the municipality and hashtag of the tweet, using the municipality dictionary.
+
+Args:
+    df (dataframe): pandas dataframe with tweets
+
+Returns:
+    dataframe: returns a modified dataframe that includes two new columns that contain information about the municipality and hashtag of the tweet.
+
+"""
 
     #Create two new columns and input default values "NaN"
     df['municipality'] = np.nan
