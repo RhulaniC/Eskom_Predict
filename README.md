@@ -1,5 +1,5 @@
-# big heading
-safdfadfs
+# Eskom_Predict Package
+Python functions used to analyse and calctulate data from Eskom. These functions process both numerical and text data. 
 
-## Sub heading
+## Getting started
 sdafaf
