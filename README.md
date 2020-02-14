@@ -6,7 +6,7 @@ This project runs on the latest version of Python. Before you can start, ensure 
 
 ## Intalling the project package from GitHub
  issue this command to install from GitHub:
- pip install git+https://github.com/Xenaschke/Eskom_Predict.git
+ `pip install git+https://github.com/Xenaschke/Eskom_Predict.git`
  
  if you need to install the latest version of this package, use:
  pip install --upgrade git+https://github.com/Xenaschke/Eskom_Predict.git
