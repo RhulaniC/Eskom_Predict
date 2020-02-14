@@ -9,7 +9,7 @@ def word_splitter(df):
         df (dataframe): pandas dataframe with tweets
 
     Returns:
-        dataframe: returns a modified dataframe that includes a new column that contains the tikenized tweets (in lowercase).
+        dataframe: returns a modified dataframe that includes a new column that contains the tokenized tweets (in lowercase).
 
     Examples:
         >>> word_splitter(twitter_df.copy())
