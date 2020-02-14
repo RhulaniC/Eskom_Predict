@@ -13,6 +13,15 @@ Returns:
 
 """
 
+mun_dict =
+    { '@CityofCTAlerts' : 'Cape Town',
+    '@CityPowerJhb' : 'Johannesburg',
+    '@eThekwiniM' : 'eThekwini' ,
+    '@EMMInfo' : 'Ekurhuleni',
+    '@centlecutility' : 'Mangaung',
+    '@NMBmunicipality' : 'Nelson Mandela Bay',
+    '@CityTshwane' : 'Tshwane' }
+
     #Create two new columns and input default values "NaN"
     df['municipality'] = np.nan
     df['hashtags'] = np.nan
