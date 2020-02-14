@@ -28,7 +28,31 @@ This function date_parser(list_dates) takes in a list of datetime strings, extra
 An argument list_dates = ['2019-11-29 12:50:54','2019-11-29 12:46:53''2019-11-29 12:46:10'] will return ['2019-11-29', '2019-11-29', '2019-11-29'].
 
 ### Function 4
-This function df (dataframe) takes in pandas dataframe with tweets and returns a modified dataframe that includes two new columns containing information about the municipality and  the tweet hashtag (in lowercase).
+This function extract_municipality_hashtags(df) takes in pandas dataframe with tweets and returns a modified dataframe that includes two new columns containing information about the municipality and  the tweet hashtag (in lowercase).
+
+#### Example 
+An argument twitter_df.copy() = 	Tweets                                               Date
+                                 0	@BongaDlulane Please send an email to mediades...	 2019-11-29 12:50:54
+                                 1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53
+                                 2	@BongaDlulane Query escalated to media desk.	      2019-11-29 12:46:10
+                                 3	Before leaving the office this afternoon, head... 	2019-11-29 12:33:36
+                                 4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	 2019-11-29 12:17:43
+  Tweets	                                            Date         	        municipality     	hashtags
+0	@BongaDlulane Please send an email to mediades...	  2019-11-29 12:50:54	 NaN	               NaN
+1	@saucy_mamiie Pls log a call on 0860037566	         2019-11-29 12:46:53	 NaN               	NaN
+2	@BongaDlulane Query escalated to media desk.	       2019-11-29 12:46:10	 NaN               	NaN
+3	Before leaving the office this afternoon, head...	  2019-11-29 12:33:36 	NaN	               NaN
+4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	  2019-11-29 12:17:43	 NaN	               [#eskomfreestate, #mediastatement]
+...	...	...	...	...
+195	Eskom's Visitors Centresâ€™ facilities include i  2019-11-20 10:29:07	 NaN	               NaN
+196	#Eskom connected 400 houses and in the process...	2019-11-20 10:25:20	 NaN	               [#eskom, #eskom, #poweringyourworld]
+197	@ArthurGodbeer Is the power restored as yet?	     2019-11-20 10:07:59	 NaN	               NaN
+198	@MuthambiPaulina @SABCNewsOnline @IOL @eNCA @e...	2019-11-20 10:07:41	 NaN               	NaN
+199	RT @GP_DHS: The @GautengProvince made a commit...	2019-11-20 10:00:09	 NaN	               NaN
+
+### Function 5
+This function takes in Dataframe containing atleast a "Date" column and "Tweets" column and returns a Dataframe grouped by day, with the number of tweets for that day.
+
 #### Example 
 An argument twitter_df.copy() = 	Tweets                                               Date
                                  0	@BongaDlulane Please send an email to mediades...	 2019-11-29 12:50:54
@@ -48,9 +72,29 @@ will return: Date	       Tweets
             2019-11-26  	32
             2019-11-27  	13
             2019-11-28  	32
-            2019-11-29	  16
-            
- ### Function 5
- 
-                 ,
-                        
+            2019-11-29	  16    
+### Function 6
+This function word_splitter(df) takes in pandas dataframe with tweets and returns a modified dataframe that includes a new column that contains the tokenized tweets (in lowercase).
+
+#### Example
+An argument = df                    Tweets                                                  Date
+                                 0	@BongaDlulane Please send an email to mediades...	 2019-11-29 12:50:54
+                                 1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53
+                                 2	@BongaDlulane Query escalated to media desk.	      2019-11-29 12:46:10
+                                 3	Before leaving the office this afternoon, head... 	2019-11-29 12:33:36
+                                 4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	 2019-11-29 12:17:43
+
+      Tweets	                                                Date	        Split Tweets
+    0	@BongaDlulane Please send an email to mediades...	    2019-11-29	    [@bongadlulane, please, send, an, email, to, m...
+    1	@saucy_mamiie Pls log a call on 0860037566	           2019-11-29	    [@saucy_mamiie, pls, log, a, call, on, 0860037...
+    2	@BongaDlulane Query escalated to media desk.	         2019-11-29	    [@bongadlulane, query, escalated, to, media, d...
+    3	Before leaving the office this afternoon, head...     2019-11-29    	[before, leaving, the, office, this, afternoon...
+    4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	    2019-11-29	    [#eskomfreestate, #mediastatement, :, eskom, s...
+
+### Function 7 
+This function takes in Dataframe containing atleast a "Date" column and "Tweets" column and returns a modified dataframe containing a column with english stop words removed from a tokenised tweet.
+
+#### Example
+
+
+
