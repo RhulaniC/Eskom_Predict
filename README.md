@@ -97,14 +97,14 @@ An argument  df   =
 |3	|Before leaving the office this afternoon, head... 	|2019-11-29 12:33:36|
 |4	|#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	 |2019-11-29 12:17:43|
 
- ||Tweets|                                                  Date|	    Split Tweets|  
- |---|---|---|---|  
- |0|	@BongaDlulane Please send an email to mediades...	 |   2019-11-29	|    [@bongadlulane, please, send, an, email, to, m...|  
-   1	@saucy_mamiie Pls log a call on 0860037566	           2019-11-29	    [@saucy_mamiie, pls, log, a, call, on, 0860037...
-  2	@BongaDlulane Query escalated to media desk.	         2019-11-29	    [@bongadlulane, query, escalated, to, media, d...
-    3	Before leaving the office this afternoon, head...     2019-11-29    	[before, leaving, the, office, this, afternoon...
-    4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	    2019-11-29	    [#eskomfreestate, #mediastatement, :, eskom, s...
-     
+||Tweets|	                                                Date	   |     Split Tweets|
+|--|---|---|---|
+   | 0	@BongaDlulane Please send an email to mediades...	 |   2019-11-29	  |  [@bongadlulane, please, send, an, email, to, m...|
+    |1 |	@saucy_mamiie Pls log a call on 0860037566	       |    2019-11-29	 |   [@saucy_mamiie, pls, log, a, call, on, 0860037...|
+   | 2 |	@BongaDlulane Query escalated to media desk.	      |   2019-11-29	  |  [@bongadlulane, query, escalated, to, media, d...|
+   | 3	| Before leaving the office this afternoon, head...   |  2019-11-29    |	[before, leaving, the, office, this, afternoon...|
+   | 4	| #ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	   | 2019-11-29	    |[#eskomfreestate, #mediastatement, :, eskom, s...      |
+
 ### Function 7 
 This function  stop_words_remover(df) takes in Dataframe containing atleast a "Date" column and "Tweets" column and returns a modified dataframe containing a column with english stop words removed from a tokenised tweet.
 
@@ -119,13 +119,14 @@ An argument df =
 |3	|Before leaving the office this afternoon, head... |	2019-11-29 12:33:36|
 |4	|#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	 |2019-11-29 12:17:43|
 Returns
-
-    |Tweets	                                    Date	                Without Stop Words
-    0	@BongaDlulane Please send...	       2019-11-29 12:50:54	   [@bongadlulane, send, email, ...  
-    1	@saucy_mamiie Pls log...	           2019-11-29 12:46:53	   [@saucy_mamiie, pls, log, ...  
-    2	@BongaDlulane Query...	             2019-11-29 12:46:10	   [@bongadlulane, query, ...  
-    3	Before leaving the office...	       2019-11-29 12:33:36	   [leaving, office, ...  
-    4	#ESKOMFREESTATE #MEDIASTATEMENT...  2019-11-29 12:17:43	   [#eskomfreestate, #mediastatement, ...  
+ ||Tweets	|                                    Date	      |          Without Stop Words|
+ |--|--|--|--|
+   | 0	|@BongaDlulane Please send...	   |    2019-11-29 12:50:54	  | [@bongadlulane, send, email, ...  |
+   | 1	|@saucy_mamiie Pls log...	        |   2019-11-29 12:46:53	  | [@saucy_mamiie, pls, log, ...  |
+    |2	|@BongaDlulane Query...	           |  2019-11-29 12:46:10	  | [@bongadlulane, query, ...  |
+    |3	|Before leaving the office...	      | 2019-11-29 12:33:36	  | [leaving, office, ...  |
+    |4|	#ESKOMFREESTATE #MEDIASTATEMENT... | 2019-11-29 12:17:43	  | [#eskomfreestate, #mediastatement, ... |
+    
     
 ## How to contribute to the project
 To contribute to this repository, one needs to email the owners of this repository before making any changes. 
