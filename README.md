@@ -88,12 +88,14 @@ will return:
 This function word_splitter(df) takes in pandas dataframe with tweets and returns a modified dataframe that includes a new column that contains the tokenized tweets (in lowercase).
 
 #### Example
-An argument  df   =                 Tweets                                                  Date
-                                 0	@BongaDlulane Please send an email to mediades...	 2019-11-29 12:50:54
-                                 1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53
-                                 2	@BongaDlulane Query escalated to media desk.	      2019-11-29 12:46:10
-                                 3	Before leaving the office this afternoon, head... 	2019-11-29 12:33:36
-                                 4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	 2019-11-29 12:17:43
+An argument  df   =               
+||Tweets|                                                  Date|
+|---|---|---|
+|0|	@BongaDlulane Please send an email to mediades...	| 2019-11-29 12:50:54|
+|1	|@saucy_mamiie Pls log a call on 0860037566	        |2019-11-29 12:46:53|
+|2	|@BongaDlulane Query escalated to media desk.	      |2019-11-29 12:46:10|
+|3	|Before leaving the office this afternoon, head... 	|2019-11-29 12:33:36|
+|4	|#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	 |2019-11-29 12:17:43|
 
       Tweets	                                                Date	        Split Tweets
     0	@BongaDlulane Please send an email to mediades...	    2019-11-29	    [@bongadlulane, please, send, an, email, to, m...
@@ -107,12 +109,14 @@ This function  stop_words_remover(df) takes in Dataframe containing atleast a "D
 
 #### Example
 
-An argument df =                    Tweets                                               Date
-                                 0	@BongaDlulane Please send an email to mediades...	 2019-11-29 12:50:54
-                                 1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53
-                                 2	@BongaDlulane Query escalated to media desk.	      2019-11-29 12:46:10
-                                 3	Before leaving the office this afternoon, head... 	2019-11-29 12:33:36
-                                 4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	 2019-11-29 12:17:43
+An argument df =                    
+||Tweets|                                               Date|
+|--|--|--|
+|0|	@BongaDlulane Please send an email to mediades...	| 2019-11-29 12:50:54|
+|1|	@saucy_mamiie Pls log a call on 0860037566	        |2019-11-29 12:46:53|
+|2	|@BongaDlulane Query escalated to media desk.	     | 2019-11-29 12:46:10|
+|3	|Before leaving the office this afternoon, head... |	2019-11-29 12:33:36|
+|4	|#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	 |2019-11-29 12:17:43|
 Returns
 
      Tweets	                             Date	                Without Stop Words
