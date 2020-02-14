@@ -23,7 +23,7 @@ An argument items = [3,5,6,78,8,9,9,6,4,6.8,7,8,9,1] will return {'max': 78.0, '
 
 ###Function 3
 This function date_parser(list_dates) takes in a list of datetime strings, extracts the dates of each item in the list, and returns the date in 'yyyy-mm-dd' format.
-####Example
+####Example 
 An argument list_dates = ['2019-11-29 12:50:54','2019-11-29 12:46:53''2019-11-29 12:46:10'] will return ['2019-11-29', '2019-11-29', '2019-11-29'].
 ###Function 4
 
