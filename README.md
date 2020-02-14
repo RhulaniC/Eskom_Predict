@@ -98,7 +98,7 @@ An argument  df   =
 |4	|#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	 |2019-11-29 12:17:43|
 
  ||Tweets|                                                  Date|	    Split Tweets|  
- |---|---|---|  
+ |---|---|---|---|  
  |0|	@BongaDlulane Please send an email to mediades...	 |   2019-11-29	|    [@bongadlulane, please, send, an, email, to, m...|  
    1	@saucy_mamiie Pls log a call on 0860037566	           2019-11-29	    [@saucy_mamiie, pls, log, a, call, on, 0860037...
   2	@BongaDlulane Query escalated to media desk.	         2019-11-29	    [@bongadlulane, query, escalated, to, media, d...
