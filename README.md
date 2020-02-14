@@ -118,10 +118,10 @@ For pull request process: Update the README.md with details of changes to the in
 ## Authors
 
 Abdullah Shaikh  
-Kolobe Rufus Seopa
-Tshegofatjo Makhafola
-Vahiel Moodley
-Xenaschke Croucamp
+Kolobe Rufus Seopa  
+Tshegofatjo Makhafola  
+Vahiel Moodley  
+Xenaschke Croucamp  
 
 ## Acknowledgements
 Damian Vather for his assistance.
