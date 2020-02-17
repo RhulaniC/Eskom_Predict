@@ -1,17 +1,19 @@
 def five_num_summary(items):
-"""
+    """
 
-This function returns a five number summary as a dictionary
+    This function returns a five number summary as a dictionary
 
-The function takes in a list of integers and returns a dictionary of the five number summary
+    The function takes in a list of integers and returns a dictionary of the five number summary.
+    The answers should be rounded to decimal places.
 
-Args:
-    items (list):  List of integers
+    Args:
+        items (list):  List of integers
 
-Returns:
-    dictionary: with keys 'max', 'median', 'min', 'q1', and 'q3' corresponding to the maximum, median, minimum, first quartile and third quartile
+    Returns:
+        dictionary: with keys 'max', 'median', 'min', 'q1', and 'q3' corresponding
+        to the maximum, median, minimum, first quartile and third quartile respectively.
 
-"""
+    """
 
     #sort list into ascending order
     s = sorted(items)
@@ -25,9 +27,9 @@ Returns:
 
     #return function as a dictionary
     result = {'max':a,
-             'median':c,
-             'min':b,
-             'q1':q1,
-             'q3':q3}
+                 'median':c,
+                 'min':b,
+                 'q1':q1,
+                 'q3':q3}
 
     return result
