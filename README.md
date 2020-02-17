@@ -8,19 +8,30 @@ This project runs on the latest version of Python. Before you can start, ensure 
  Issue this command to install from GitHub:  
 
  `pip install git+https://github.com/Xenaschke/Eskom_Predict.git`
- 
+
  If you need to install the latest version of this package, use:  
 
  `pip install --upgrade git+https://github.com/Xenaschke/Eskom_Predict.git`
- 
+
 ## Running the codes
 Once the package is installed into python the following functions can be used to get the metrics:
 
-## Function 1
-  
-  
+## dictionary_of_metrics(items)
+The function takes in a list of integers and returns a dictionary containing the mean, median, variance, standard deviation,
+minimum and maximum of the list of items.
+#### Example
+An argument:  
+`items = [39660.0, 36024.0, 32127.0, 39488.0, 18422.0, 23532.0, 8842.0, 37416.0, 16156.0, 18730.0, 19261.0, 25275.0]`
+
+Returns:
+
+`{'mean': 26244.42, 'median': 24403.5, 'var': 108160153.17, 'std': 10400.01, 'min': 8842.0, 'max': 39660.0}`  
+
+
+
+
 ## five_num_summary(items)
-For this function, you must first import the numpy package. The function takes in a list of integers and returns a dictionary of a five number summary containing: max, median, min, Q1 and Q3. 
+For this function, you must first import the numpy package. The function takes in a list of integers and returns a dictionary of a five number summary containing: max, median, min, Q1 and Q3.
 #### Example
 An argument:  
 `items = [3,5,6,78,8,9,9,6,4,6.8,7,8,9,1]`
@@ -29,12 +40,12 @@ Returns:
 
 `{'max': 78.0, 'median': 6.9, 'min': 1.0, 'q1': 5.25, 'q3': 8.75}`  
 
-  
-  
+
+
 ## date_parser(list_dates)  
 This function takes in a list of datetime strings, extracts the dates of each item in the list, and returns the date in 'yyyy-mm-dd' format.
 
-#### Example 
+#### Example
 An argument:  
 `list_dates = ['2019-11-29 12:50:54','2019-11-29 12:46:53''2019-11-29 12:46:10']`
 
@@ -60,7 +71,7 @@ df =
 | 4 |	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	 |  2019-11-29 12:17:43  |        
 
 Returns:
-                         	                                         
+
 | | Tweets	 |                                           Date    |     	        municipality  |   	hashtags |
 |---|----|----|----|---|
 | 0	| @BongaDlulane Please send an email to mediades...	|  2019-11-29 12:50:54	| NaN	          |     NaN |
@@ -74,15 +85,15 @@ Returns:
 | 197 |	@ArthurGodbeer Is the power restored as yet?	   |  2019-11-20 10:07:59	| NaN	            |   NaN |
 | 198 | 	@MuthambiPaulina @SABCNewsOnline @IOL @eNCA @e... |	2019-11-20 10:07:41	 | NaN            |   	NaN |
 | 199	| RT @GP_DHS: The @GautengProvince made a commit... | 	2019-11-20 10:00:09	| NaN	            |   NaN |
-  
-  
-  
+
+
+
 ## number_of_tweets_per_day(df)
 This function takes a dataframe containing at least a "Date" column and "Tweets" column as input. It returns a dataframe grouped by day, with the number of tweets for that day.
 
-#### Example 
+#### Example
 An argument:  
-df= 
+df=
 
 | | Tweets | Date |  
 |---|---|---|
@@ -91,7 +102,7 @@ df=
 | 2 |	@BongaDlulane Query escalated to media desk.	     | 2019-11-29 12:46:10 |
 | 3 |	Before leaving the office this afternoon, head... |	2019-11-29 12:33:36 |
 | 4 |	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	| 2019-11-29 12:17:43 |  
-                           
+
 Returns:  
 
 |Date|	       Tweets|
@@ -106,9 +117,9 @@ Returns:
 | 2019-11-27  |	13 |
 | 2019-11-28  |	32 |
 | 2019-11-29	 | 16 |   
-  
-  
-  
+
+
+
 ## word_splitter(df)
 This function takes a pandas dataframe with tweets as input. It returns a modified dataframe that includes a new column that contains the tokenized tweets (in lowercase).
 
@@ -132,8 +143,8 @@ Returns:
 | 2 |	@BongaDlulane Query escalated to media desk.	      |   2019-11-29	  |   [@bongadlulane, query, escalated, to, media, d...|  
 | 3	| Before leaving the office this afternoon, head...   |  2019-11-29    |	 [before, leaving, the, office, this, afternoon...|  
 | 4	| #ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	   | 2019-11-29	    | [#eskomfreestate, #mediastatement, :, eskom, s...      |
-  
-  
+
+
 ## stop_words_remover(df)
 This function takes a dataframe containing at least a "Date" column and "Tweets" column as input. It returns a modified dataframe containing a column where English stop words are removed from a tokenised tweet.
 
@@ -159,9 +170,9 @@ Returns:
 |3	|Before leaving the office...	      | 2019-11-29 12:33:36	  | [leaving, office, ...  |
 |4|	#ESKOMFREESTATE #MEDIASTATEMENT... | 2019-11-29 12:17:43	  | [#eskomfreestate, #mediastatement, ... |
 
-    
+
 ## How to contribute to the project
-To contribute to this repository, one needs to email the owners of this repository before making any changes. 
+To contribute to this repository, one needs to email the owners of this repository before making any changes.
 For pull request process: Update the README.md with details of changes to the interface
                           You may merge the Pull Request in once you have the sign-off of the developers.
 ## Authors
