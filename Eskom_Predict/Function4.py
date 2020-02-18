@@ -13,8 +13,8 @@ def extract_municipality_hashtags(df):
 
     Returns:
         dataframe: returns a modified dataframe that includes two new columns
-        that contain information about the municipality and hashtag of the tweet
-        (in lowercase).
+                   that contain information about the municipality and hashtag
+                   of the tweet (in lowercase).
 
     Examples:
         >>> extract_municipality_hashtags(twitter_df.copy())
@@ -46,12 +46,17 @@ def extract_municipality_hashtags(df):
 
     for keys,values in mun_dict.items():
         for i in range(200):
-            if keys in df1.str.split()[i]:            #if key (from dictionary) is found in the tweet, then:
-                df['municipality'][i] = values        #output corresponding value (from dictionary) into 'municipality' column
+            #if key (from dictionary) is found in the tweet, then:
+            if keys in df1.str.split()[i]:
+                #output corresponding value (from dictionary) into 'municipality' column
+                df['municipality'][i] = values
 
     #extracting all hashtags from tweets and displaying them in 'hashtags' column as lowercase
     df['hashtags'] = list(map(lambda token: [x for x in token if x.startswith('#')], df['Tweets'].str.lower().str.split()))
     for i in range(200):
-        if df['hashtags'][i] == []:                   #if tweet has no hashtag, then:
-            df['hashtags'][i] = np.nan                #output 'NaN'
-    return df                                         #return dataframe with new columns
+        #if tweet has no hashtag, then:
+        if df['hashtags'][i] == []:
+            #output 'NaN'
+            df['hashtags'][i] = np.nan
+    #return dataframe with new columns
+    return df

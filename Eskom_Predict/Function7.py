@@ -4,11 +4,11 @@ def stop_words_remover(df):
 
     Args:
         df (dataframe): Dataframe containing atleast a "Date" column and "Tweets"
-        column.
+                        column.
 
     Returns:
         (dataframe): Modified dataframe containing a column with english stop
-        words removed from a tokenised tweet.
+                     words removed from a tokenised tweet.
 
     Examples:
         >>> number_of_tweets_per_day(Twitter_dataframe)
@@ -54,7 +54,9 @@ def stop_words_remover(df):
         'same', 'were', 'it', 'every', 'third', 'together'
         ]
     }
-
+    #Tokenize lowercase tweets
     df['Without Stop Words'] = df['Tweets'].str.lower().str.split()
+    #Remove stopwords
     df['Without Stop Words'] = list(map(lambda x: [s for s in x if s not in stop_words_dict['stopwords']], df['Without Stop Words']))
+    #Return modified dataframe
     return df
