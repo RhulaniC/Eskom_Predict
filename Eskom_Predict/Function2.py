@@ -1,3 +1,4 @@
+import numpy as np
 def five_num_summary(items):
     """
 
@@ -41,5 +42,5 @@ def five_num_summary(items):
               'min':b,
               'q1':q1,
               'q3':q3 }
-    
+
     return result
