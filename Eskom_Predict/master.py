@@ -1,26 +1,131 @@
+def dictionary_of_metrics(items):
+
+    # caltulating the mean
+    average= round(sum(items)/len(items),2)
+    # calculating maximum value
+    maximum = max(items)
+    # calculating minimun value
+    minimum =min(items)
+
+
+    n = len(items)
+    s = sorted(items)
+    #calculating variance and std dev
+    var =round(sum([((x - average) ** 2) for x in items]) /(n-1),2)
+    #var1=np.var(items)
+    stddev=round(var**0.5,2)
+    #calculating median
+    if (n%2)==0:
+        lower=int(n/2)-1
+        upper =lower +1
+        median = round((s[lower]+s[upper])/2,2)
+
+    else:
+        median = s[int(n/2)]
+
+    # returning the results as a dictionary
+    results =  {'mean': average,
+                'median': median,
+                'var': var ,
+                'std': stddev,
+                'min':  minimum,
+                'max': maximum}
+
+    return results
+
+
+
+def five_num_summary(items):
+
+    #sort list into ascending order
+    s = sorted(items)
+
+    #calculate 5 number summary rounded to 2 decimal places
+    a = round(np.max(s),2)
+    b = round(np.min(s),2)
+    c = round(np.median(s),2)
+    q1 = round(np.percentile(s,25),2)
+    q3 = round(np.percentile(s,75),2)
+
+    #return function as a dictionary
+    result = {'max':a,
+              'median':c,
+              'min':b,
+              'q1':q1,
+              'q3':q3 }
+
+    return result
+
+
+
+def date_parser(list_dates):
+
+    #Remove the dates in the format 'yyyy-mm-dd' from the given list
+    dates_only = list(map(lambda x : x[:10] ,list_dates))
+    #Return the list containing only the dates
+    return dates_only
+
+
+
+def extract_municipality_hashtags(df):
+
+    mun_dict =
+        { '@CityofCTAlerts' : 'Cape Town',
+        '@CityPowerJhb' : 'Johannesburg',
+        '@eThekwiniM' : 'eThekwini' ,
+        '@EMMInfo' : 'Ekurhuleni',
+        '@centlecutility' : 'Mangaung',
+        '@NMBmunicipality' : 'Nelson Mandela Bay',
+        '@CityTshwane' : 'Tshwane' }
+
+    #Create two new columns and input default values "NaN"
+    df['municipality'] = np.nan
+    df['hashtags'] = np.nan
+
+    #Create intermediate dataframe omitting colons from df
+    df1 = df['Tweets'].str.replace(':', '')
+
+    for keys,values in mun_dict.items():
+        for i in range(200):
+            #if key (from dictionary) is found in the tweet, then:
+            if keys in df1.str.split()[i]:
+                #output corresponding value (from dictionary) into 'municipality' column
+                df['municipality'][i] = values
+
+    #extracting all hashtags from tweets and displaying them in 'hashtags' column as lowercase
+    df['hashtags'] = list(map(lambda token: [x for x in token if x.startswith('#')], df['Tweets'].str.lower().str.split()))
+    for i in range(200):
+        #if tweet has no hashtag, then:
+        if df['hashtags'][i] == []:
+            #output 'NaN'
+            df['hashtags'][i] = np.nan
+    #return dataframe with new columns
+    return df
+
+
+
+def number_of_tweets_per_day(df):
+
+    #Extract the 'Date' column from the input twitter dataframe
+    twitter_df['Date'] = twitter_df['Date'].str[:10]
+    #Group by date and count the number of tweets per date
+    df_out = twitter_df.groupby('Date').count()
+    #Return dataframe containing the date and number of tweets per day
+    return df_out
+
+
+
+def word_splitter(df):
+
+    #Tokenize lowercase tweets
+    df['Split Tweets'] = df['Tweets'].str.lower().str.split()
+    #Return modified dataframe
+    return df
+
+
+
 def stop_words_remover(df):
-    """
-    Return a modified dataframe with english stop words removed from a tokenised tweet.
 
-    Args:
-        df (dataframe): Dataframe containing atleast a "Date" column and "Tweets"
-                        column.
-
-    Returns:
-        (dataframe): Modified dataframe containing a column with english stop
-                     words removed from a tokenised tweet.
-
-    Examples:
-        >>> number_of_tweets_per_day(Twitter_dataframe)
-
-        Tweets	                             Date	                Without Stop Words
-    0	@BongaDlulane Please send...	     2019-11-29 12:50:54	[@bongadlulane, send, email, ...
-    1	@saucy_mamiie Pls log...	         2019-11-29 12:46:53	[@saucy_mamiie, pls, log, ...
-    2	@BongaDlulane Query...	             2019-11-29 12:46:10	[@bongadlulane, query, ...
-    3	Before leaving the office...	     2019-11-29 12:33:36	[leaving, office, ...
-    4	#ESKOMFREESTATE #MEDIASTATEMENT...	 2019-11-29 12:17:43	[#eskomfreestate, #mediastatement, ...
-
-    """
     # dictionary of english stopwords
     stop_words_dict = {'stopwords':[
         'where', 'done', 'if', 'before', 'll', 'very', 'keep', 'something', 'nothing', 'thereupon',

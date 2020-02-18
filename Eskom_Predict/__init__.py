@@ -5,3 +5,4 @@ from . import Function4
 from . import Function5
 from . import Function6
 from . import Function7
+from . import master

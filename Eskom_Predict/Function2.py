@@ -11,16 +11,17 @@ def five_num_summary(items):
 
     Returns:
         dictionary: with keys 'max', 'median', 'min', 'q1', and 'q3' corresponding
-        to the maximum, median, minimum, first quartile and third quartile respectively.
+                    to the maximum, median, minimum, first quartile and third
+                    quartile respectively.
 
     Examples:
         >>> five_num_summary([3,5,6,78,8,9,9,6,4,6.8,7,8,9,1])
 
             {'max': 78.0,
-            'median': 6.9,
-            'min': 1.0,
-            'q1': 5.25,
-            'q3': 8.75}
+             'median': 6.9,
+             'min': 1.0,
+             'q1': 5.25,
+             'q3': 8.75 }
 
     """
 
@@ -36,9 +37,9 @@ def five_num_summary(items):
 
     #return function as a dictionary
     result = {'max':a,
-                 'median':c,
-                 'min':b,
-                 'q1':q1,
-                 'q3':q3}
-
+              'median':c,
+              'min':b,
+              'q1':q1,
+              'q3':q3 }
+    
     return result

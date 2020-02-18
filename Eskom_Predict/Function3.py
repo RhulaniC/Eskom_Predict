@@ -7,7 +7,7 @@ def date_parser(list_dates):
 
     Returns:
         (list) : Extract only the date of each item in the input list
-        and return in 'yyyy-mm-dd' format
+                 and return in 'yyyy-mm-dd' format
 
     Examples:
         >>> date_parser(['2019-11-29 12:50:54',
@@ -19,6 +19,7 @@ def date_parser(list_dates):
          '2019-11-29']
 
     """
-
-    dates_only = map(lambda x : x[:10] ,list_dates)
-    return list(dates_only)
+    #Remove the dates in the format 'yyyy-mm-dd' from the given list
+    dates_only = list(map(lambda x : x[:10] ,list_dates))
+    #Return the list containing only the dates
+    return dates_only
