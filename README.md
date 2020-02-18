@@ -160,8 +160,9 @@ Returns:
 ## Acquire the data used in our examples  
 Issue these commands in your notebook to acquire the data that was used in this file's examples:  
 
-```import pandas as pd  
-  
+```
+import pandas as pd  
+
 # Electricification by province (EBP) data  
 ebp_url = 'https://raw.githubusercontent.com/Explore-AI/Public-Data/master/Data/electrification_by_province.csv'  
 ebp_df = pd.read_csv(ebp_url)  
