@@ -1,7 +1,5 @@
 def dictionary_of_metrics(items):
-
     """
-
     Function that calculates the mean, median, variance, standard deviation,
     minimum and maximum of the list of items.
 

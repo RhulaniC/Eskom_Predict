@@ -1,7 +1,6 @@
 import numpy as np
 def five_num_summary(items):
     """
-
     This function returns a five number summary as a dictionary
 
     The function takes in a list of integers and returns a dictionary of the five number summary.
