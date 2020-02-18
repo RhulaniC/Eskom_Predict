@@ -2,8 +2,10 @@
 This package contains python functions used to analyse data from Eskom. These functions process both numerical and text data.
 
 ## What you will need
-This project runs on the latest version of Python. Before you can start, ensure that the latest version of python is installed.  
+This project runs on the latest version of Python. Before you can start, ensure that the latest version of python is installed. This package also requires numpy to be installed. Issue the following command to install numpy:  
 
+`pip install numpy`  
+  
 ## Installing the project package from GitHub
  Issue this command to install from GitHub:  
 
@@ -160,30 +162,33 @@ Returns:
 ## Acquire the data used in our examples  
 Issue these commands in your notebook to acquire the data that was used in this file's examples:  
 
-```# Electricification by province (EBP) data  
+```
+import pandas as pd  
+
+# Electricification by province (EBP) data  
 ebp_url = 'https://raw.githubusercontent.com/Explore-AI/Public-Data/master/Data/electrification_by_province.csv'  
 ebp_df = pd.read_csv(ebp_url)  
 
- for col, row in ebp_df.iloc[:,1:].iteritems():  
-     ebp_df[col] = ebp_df[col].str.replace(',','').astype(int)  
+for col, row in ebp_df.iloc[:,1:].iteritems():  
+    ebp_df[col] = ebp_df[col].str.replace(',','').astype(int)  
 
- ebp_df.head()  
+ebp_df.head()  
 
- #Twitter data  
- twitter_url = 'https://raw.githubusercontent.com/Explore-AI/Public-Data/master/Data/twitter_nov_2019.csv'  
- twitter_df = pd.read_csv(twitter_url)  
- twitter_df.head()  
+#Twitter data  
+twitter_url = 'https://raw.githubusercontent.com/Explore-AI/Public-Data/master/Data/twitter_nov_2019.csv'  
+twitter_df = pd.read_csv(twitter_url)  
+twitter_df.head()  
 
- # gauteng ebp data as a list  
- gauteng = ebp_df['Gauteng'].astype(float).to_list()  
+# gauteng ebp data as a list  
+gauteng = ebp_df['Gauteng'].astype(float).to_list()  
 
- # dates for twitter tweets  
- dates = twitter_df['Date'].to_list()
+# dates for twitter tweets  
+dates = twitter_df['Date'].to_list()
  ```
 
 ## How to contribute to the project
 To contribute to this repository, one needs to email the owners of this repository before making any changes.  
-  
+
 For pull request process: Update the README.md with details of changes to the interface.
                           You may merge the Pull Request in once you have the sign-off of the developers.
 

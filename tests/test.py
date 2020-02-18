@@ -42,6 +42,8 @@ date_parser(['2019-11-27 10:55:14','2019-11-30 12:50:23']) == ['2019-11-27',
 
 #############################################
  #Twitter data
+ import pandas as pd
+ 
  twitter_url = 'https://raw.githubusercontent.com/Explore-AI/Public-Data/master/Data/twitter_nov_2019.csv'
  twitter_df = pd.read_csv(twitter_url)
  twitter_df.head()
@@ -58,7 +60,7 @@ extract_municipality_hashtags(twitter_df.copy()).loc[196, "hashtags"] == ['#esko
                                                                           '#poweringyourworld']
 
 
-                                                                          
+
 # number_of_tweets_per_day(df) function test cases
 number_of_tweets_per_day(twitter_df.copy()).iloc[0]['Tweets'] == 18
 
