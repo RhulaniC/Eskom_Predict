@@ -2,10 +2,8 @@
 This package contains python functions used to analyse data from Eskom. These functions process both numerical and text data.
 
 ## What you will need
-This project runs on the latest version of Python. Before you can start, ensure that the latest version of python is installed. This package also requires numpy to be installed. Issue the following command to install numpy:  
+This project runs on the latest version of Python. Before you can start, ensure that the latest version of python is installed.  
 
-`pip install numpy`  
-  
 ## Installing the project package from GitHub
  Issue this command to install from GitHub:  
 
@@ -16,9 +14,17 @@ This project runs on the latest version of Python. Before you can start, ensure 
  `pip install --upgrade git+https://github.com/Xenaschke/Eskom_Predict.git`  
 
 ## Prerequisites for package functionality  
-Issue this command in your notebook to install numpy library:  
+This package requires numpy to be installed. Issue these commands in your notebook to install and import numpy library:  
 
-`import numpy as np`
+```
+pip install numpy  
+import numpy as np  
+```
+
+## Import the project package
+ Issue this command to import the package:  
+
+ `from Eskom_Predict import master`  
 
 ## Running the codes
 Once the package is installed into python the following functions can be used to get the metrics:
