@@ -171,9 +171,8 @@ Issue these commands in your notebook to acquire the data that was used in this 
 
  `#Twitter data`
  `twitter_url = 'https://raw.githubusercontent.com/Explore-AI/Public-Data/master/Data/twitter_nov_2019.csv'`
- `twitter_df = pd.read_csv(twitter_url)  
- 
- twitter_df.head()`
+ `twitter_df = pd.read_csv(twitter_url)`
+ `twitter_df.head()`
 
  `# gauteng ebp data as a list`  
  `gauteng = ebp_df['Gauteng'].astype(float).to_list()`
