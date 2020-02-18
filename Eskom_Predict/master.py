@@ -1,3 +1,4 @@
+import numpy as np
 def dictionary_of_metrics(items):
 
     # caltulating the mean
