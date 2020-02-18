@@ -178,7 +178,7 @@ Issue these commands in your notebook to acquire the data that was used in this 
  gauteng = ebp_df['Gauteng'].astype(float).to_list()
 
  # dates for twitter tweets
- dates = twitter_df['Date'].to_list() `  
+ dates = twitter_df['Date'].to_list()`  
 
 ## How to contribute to the project
 To contribute to this repository, one needs to email the owners of this repository before making any changes.
