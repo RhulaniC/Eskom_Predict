@@ -29,14 +29,13 @@ def extract_municipality_hashtags(df):
 
     """
 
-    mun_dict =
-        { '@CityofCTAlerts' : 'Cape Town',
-        '@CityPowerJhb' : 'Johannesburg',
-        '@eThekwiniM' : 'eThekwini' ,
-        '@EMMInfo' : 'Ekurhuleni',
-        '@centlecutility' : 'Mangaung',
-        '@NMBmunicipality' : 'Nelson Mandela Bay',
-        '@CityTshwane' : 'Tshwane' }
+    mun_dict ={ '@CityofCTAlerts' : 'Cape Town',
+                '@CityPowerJhb' : 'Johannesburg',
+                '@eThekwiniM' : 'eThekwini' ,
+                '@EMMInfo' : 'Ekurhuleni',
+                '@centlecutility' : 'Mangaung',
+                '@NMBmunicipality' : 'Nelson Mandela Bay',
+                '@CityTshwane' : 'Tshwane' }
 
     #Create two new columns and input default values "NaN"
     df['municipality'] = np.nan
