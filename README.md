@@ -11,7 +11,12 @@ This project runs on the latest version of Python. Before you can start, ensure 
 
  If you need to install the latest version of this package, use:  
 
- `pip install --upgrade git+https://github.com/Xenaschke/Eskom_Predict.git`
+ `pip install --upgrade git+https://github.com/Xenaschke/Eskom_Predict.git`  
+
+## Prerequisites for package functionality  
+Issue this command in your notebook to install numpy library:  
+
+`import numpy as np`
 
 ## Running the codes
 Once the package is installed into python the following functions can be used to get the metrics:

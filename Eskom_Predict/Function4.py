@@ -1,3 +1,4 @@
+import numpy as np
 def extract_municipality_hashtags(df):
 
     """
