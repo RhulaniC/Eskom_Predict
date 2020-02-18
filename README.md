@@ -2,8 +2,10 @@
 This package contains python functions used to analyse data from Eskom. These functions process both numerical and text data.
 
 ## What you will need
-This project runs on the latest version of Python. Before you can start, ensure that the latest version of python is installed.  
+This project runs on the latest version of Python. Before you can start, ensure that the latest version of python is installed. This package also requires numpy to be installed. Issue the following command to install numpy:  
 
+`pip install numpy`  
+  
 ## Installing the project package from GitHub
  Issue this command to install from GitHub:  
 
