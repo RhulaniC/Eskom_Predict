@@ -1,6 +1,5 @@
 
 def number_of_tweets_per_day(df):
-
     """
     Returns the number of tweets that were posted per day.
 

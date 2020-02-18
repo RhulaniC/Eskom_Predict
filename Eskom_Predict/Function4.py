@@ -1,6 +1,5 @@
 import numpy as np
 def extract_municipality_hashtags(df):
-
     """
     Takes a tweet on electricity and returns the municipality mentioned and any
     hashtags in that tweet.

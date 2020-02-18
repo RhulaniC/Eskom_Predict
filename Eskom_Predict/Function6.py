@@ -1,5 +1,4 @@
 def word_splitter(df):
-
     """
     Tokenizing a tweet.
 

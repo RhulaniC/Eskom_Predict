@@ -1,5 +1,34 @@
 import numpy as np
 def dictionary_of_metrics(items):
+    """
+    Function that calculates the mean, median, variance, standard deviation,
+    minimum and maximum of the list of items.
+
+
+    The function calculates the mean, median, variance, standard deviation,
+    minimum and maximum of the list of items.
+    The input is a list of integers and it outputs as a dictionary.
+
+    Args:
+        items (list): List of integers
+
+    Returns:
+        dictionary: with keys 'mean', 'median', 'std', 'var', 'min', and 'max',
+                    corresponding to the mean, median, standard deviation, variance,
+                    minimum and maximum of the input list
+
+    Examples:
+        >>> dictionary_of_metrics([39660.0, 36024.0, 32127.0, 39488.0, 18422.0,
+            23532.0, 8842.0, 37416.0, 16156.0, 18730.0, 19261.0, 25275.0])
+
+            {'mean': 26244.42,
+            'median': 24403.5,
+            'var': 108160153.17,
+            'std': 10400.01,
+            'min': 8842.0,
+            'max': 39660.0}
+
+    """
 
     # caltulating the mean
     average= round(sum(items)/len(items),2)
@@ -37,7 +66,30 @@ def dictionary_of_metrics(items):
 
 
 def five_num_summary(items):
+    """
+    This function returns a five number summary as a dictionary
 
+    The function takes in a list of integers and returns a dictionary of the five number summary.
+    The answers should be rounded to decimal places.
+
+    Args:
+        items (list):  List of integers
+
+    Returns:
+        dictionary: with keys 'max', 'median', 'min', 'q1', and 'q3' corresponding
+                    to the maximum, median, minimum, first quartile and third
+                    quartile respectively.
+
+    Examples:
+        >>> five_num_summary([3,5,6,78,8,9,9,6,4,6.8,7,8,9,1])
+
+            {'max': 78.0,
+             'median': 6.9,
+             'min': 1.0,
+             'q1': 5.25,
+             'q3': 8.75 }
+
+    """
     #sort list into ascending order
     s = sorted(items)
 
@@ -60,7 +112,26 @@ def five_num_summary(items):
 
 
 def date_parser(list_dates):
+    """
+    From datetime strings, return only the date in 'yyyy-mm-dd' format.
 
+    Args:
+        list_dates (list): List of datetime strings
+
+    Returns:
+        (list) : Extract only the date of each item in the input list
+                 and return in 'yyyy-mm-dd' format
+
+    Examples:
+        >>> date_parser(['2019-11-29 12:50:54',
+                        '2019-11-29 12:46:53',
+                        '2019-11-29 12:46:10'])
+
+        ['2019-11-29',
+         '2019-11-29',
+         '2019-11-29']
+
+    """
     #Remove the dates in the format 'yyyy-mm-dd' from the given list
     dates_only = list(map(lambda x : x[:10] ,list_dates))
     #Return the list containing only the dates
@@ -69,7 +140,33 @@ def date_parser(list_dates):
 
 
 def extract_municipality_hashtags(df):
+    """
+    Takes a tweet on electricity and returns the municipality mentioned and any
+    hashtags in that tweet.
 
+    A function which takes in a pandas dataframe and returns a modified
+    dataframe that includes two new columns that contain information about the
+    municipality and hashtag of the tweet, using the municipality dictionary.
+
+    Args:
+        df (dataframe): pandas dataframe with tweets
+
+    Returns:
+        dataframe: returns a modified dataframe that includes two new columns
+                   that contain information about the municipality and hashtag
+                   of the tweet (in lowercase).
+
+    Examples:
+        >>> extract_municipality_hashtags(twitter_df.copy())
+
+        Tweets	                                                    Date	                municipality	hashtags
+    0	@BongaDlulane Please send an email to mediades...	        2019-11-29 12:50:54	    NaN	            NaN
+    1	@saucy_mamiie Pls log a call on 0860037566	                2019-11-29 12:46:53	    NaN	            NaN
+    2	@BongaDlulane Query escalated to media desk.	            2019-11-29 12:46:10	    NaN	            NaN
+    3	Before leaving the office this afternoon, head...	        2019-11-29 12:33:36	    NaN	            NaN
+    4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	        2019-11-29 12:17:43	    NaN	            [#eskomfreestate, #mediastatement]
+
+    """
     mun_dict = { '@CityofCTAlerts' : 'Cape Town',
                  '@CityPowerJhb' : 'Johannesburg',
                  '@eThekwiniM' : 'eThekwini' ,
@@ -105,7 +202,33 @@ def extract_municipality_hashtags(df):
 
 
 def number_of_tweets_per_day(df):
+    """
+    Returns the number of tweets that were posted per day.
 
+    Args:
+        df (dataframe): Dataframe containing atleast a "Date" column and "Tweets"
+                        column.
+
+    Returns:
+        (dataframe): Dataframe grouped by day, with the number of tweets for
+                     that day.
+
+    Examples:
+        >>> number_of_tweets_per_day(Twitter_dataframe)
+
+        Date
+        2019-11-20	18
+        2019-11-21	11
+        2019-11-22	25
+        2019-11-23	19
+        2019-11-24	14
+        2019-11-25	20
+        2019-11-26	32
+        2019-11-27	13
+        2019-11-28	32
+        2019-11-29	16
+
+    """
     #Extract the 'Date' column from the input twitter dataframe
     twitter_df['Date'] = twitter_df['Date'].str[:10]
     #Group by date and count the number of tweets per date
@@ -116,7 +239,31 @@ def number_of_tweets_per_day(df):
 
 
 def word_splitter(df):
+    """
+    Tokenizing a tweet.
 
+    A function which splits the sentences (of the tweet) in a dataframe's
+    column into a list of the separate (lowercase) words.
+
+    Args:
+        df (dataframe): pandas dataframe with tweets
+
+    Returns:
+        dataframe: returns a modified dataframe that includes a new column
+                   that contains the tokenized tweets (in lowercase).
+
+    Examples:
+        >>> word_splitter(twitter_df.copy())
+
+
+        Tweets	                                                Date	        Split Tweets
+    0	@BongaDlulane Please send an email to mediades...	    2019-11-29	    [@bongadlulane, please, send, an, email, to, m...
+    1	@saucy_mamiie Pls log a call on 0860037566	            2019-11-29	    [@saucy_mamiie, pls, log, a, call, on, 0860037...
+    2	@BongaDlulane Query escalated to media desk.	        2019-11-29	    [@bongadlulane, query, escalated, to, media, d...
+    3	Before leaving the office this afternoon, head...       2019-11-29    	[before, leaving, the, office, this, afternoon...
+    4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	    2019-11-29	    [#eskomfreestate, #mediastatement, :, eskom, s...
+
+    """
     #Tokenize lowercase tweets
     df['Split Tweets'] = df['Tweets'].str.lower().str.split()
     #Return modified dataframe
@@ -125,7 +272,28 @@ def word_splitter(df):
 
 
 def stop_words_remover(df):
+    """
+    Return a modified dataframe with english stop words removed from a tokenised tweet.
 
+    Args:
+        df (dataframe): Dataframe containing atleast a "Date" column and "Tweets"
+                        column.
+
+    Returns:
+        (dataframe): Modified dataframe containing a column with english stop
+                     words removed from a tokenised tweet.
+
+    Examples:
+        >>> number_of_tweets_per_day(Twitter_dataframe)
+
+        Tweets	                             Date	                Without Stop Words
+    0	@BongaDlulane Please send...	     2019-11-29 12:50:54	[@bongadlulane, send, email, ...
+    1	@saucy_mamiie Pls log...	         2019-11-29 12:46:53	[@saucy_mamiie, pls, log, ...
+    2	@BongaDlulane Query...	             2019-11-29 12:46:10	[@bongadlulane, query, ...
+    3	Before leaving the office...	     2019-11-29 12:33:36	[leaving, office, ...
+    4	#ESKOMFREESTATE #MEDIASTATEMENT...	 2019-11-29 12:17:43	[#eskomfreestate, #mediastatement, ...
+
+    """
     # dictionary of english stopwords
     stop_words_dict = {'stopwords':[
         'where', 'done', 'if', 'before', 'll', 'very', 'keep', 'something', 'nothing', 'thereupon',

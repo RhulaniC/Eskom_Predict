@@ -138,7 +138,7 @@ Returns:
 This function takes a dataframe containing at least a "Date" column and "Tweets" column as input. It returns a modified dataframe containing a column where English stop words are removed from a tokenised tweet.
 #### Example  
 An argument:  
-df =                    
+df =                      
 ||Tweets|                                               Date|
 |--|--|--|
 |0|	@BongaDlulane Please send an email to mediades...	| 2019-11-29 12:50:54|
@@ -156,6 +156,29 @@ Returns:
 |2	|@BongaDlulane Query...	           |  2019-11-29 12:46:10	  | [@bongadlulane, query, ...  |
 |3	|Before leaving the office...	      | 2019-11-29 12:33:36	  | [leaving, office, ...  |
 |4|	#ESKOMFREESTATE #MEDIASTATEMENT... | 2019-11-29 12:17:43	  | [#eskomfreestate, #mediastatement, ... |
+
+## Acquire the data used in our examples  
+Issue these commands in your notebook to acquire the data that was used in this file's examples:  
+
+`#Electricification by province (EBP) data  
+ ebp_url = 'https://raw.githubusercontent.com/Explore-AI/Public-Data/master/Data/electrification_by_province.csv'
+ ebp_df = pd.read_csv(ebp_url)
+
+ for col, row in ebp_df.iloc[:,1:].iteritems():
+     ebp_df[col] = ebp_df[col].str.replace(',','').astype(int)
+
+ ebp_df.head()
+
+ #Twitter data
+ twitter_url = 'https://raw.githubusercontent.com/Explore-AI/Public-Data/master/Data/twitter_nov_2019.csv'
+ twitter_df = pd.read_csv(twitter_url)
+ twitter_df.head()
+
+ # gauteng ebp data as a list
+ gauteng = ebp_df['Gauteng'].astype(float).to_list()
+
+ # dates for twitter tweets
+ dates = twitter_df['Date'].to_list() `  
 
 ## How to contribute to the project
 To contribute to this repository, one needs to email the owners of this repository before making any changes.
